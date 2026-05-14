@@ -1,4 +1,4 @@
-# Aloha Gripper Implementation
+# Stretch 3 Aloha Gripper Implementation
 
 ### 1. Uninstall existing Stretch Body
 
