@@ -204,7 +204,15 @@ cd ~/ament_ws/src/stretch_web_teleop
 git checkout master
 ```
 
-#### 5) Run a system check to ensure everything is up to date:
+#### 5) Rebuild and source ROS 2 workspace:
+
+```bash
+cd ~/ament_ws
+colcon build
+source install/setup.bash
+```
+
+#### 6) Run a system check to ensure everything is up to date:
 ```bash
 stretch_system_check.py -v
 ```
