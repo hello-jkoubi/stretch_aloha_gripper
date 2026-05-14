@@ -12,6 +12,7 @@ pip3 uninstall hello-robot-stretch-body
 cd ~/repos
 git clone https://github.com/hello-robot/stretch_body
 cd stretch_body
+git pull
 git checkout feature/aloha_gripper_on_latest
 pip3 install -e body/
 ```
@@ -52,7 +53,7 @@ cd $HELLO_FLEET_PATH/$HELLO_FLEET_ID
 nano stretch_user_params.yaml
 ```
 
-It should look like:
+Replace its content with the folowing:
 
 ```bash
 robot:
@@ -61,6 +62,9 @@ robot:
 stretch_gripper:
   range_t: [<fully-closed-ticks>, <fully-open-ticks>]
   zero_t: <homing-ticks>
+eoa_wrist_dw3_aloha_gripper:
+  stow:
+    wrist_pitch: -0.7
 ```
 
 You will use the `REx_dynamixel_jog.py` tool to note down the internal servo position in ticks while the Gripper is wide open and fully closed. Here are the steps to get the values.
@@ -101,6 +105,7 @@ You can find the docs related Gamepad Teleoperation here: https://docs.hello-rob
 Checkout to the aloha branch implementation:
 ```bash
 cd ~/ament_ws/src/stretch_web_teleop
+git pull
 git checkout feature/aloha_gripper
 ```
 
