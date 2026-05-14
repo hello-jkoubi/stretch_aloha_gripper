@@ -182,7 +182,7 @@ pip3 uninstall -y hello-robot-stretch-body
 
 #### 2) Reinstall the original version from PyPI:
 ```bash
-pip3 install hello-robot-stretch-body
+pip3 install -U hello-robot-stretch-body
 ```
 This will restore your environment to the exact state it was in before you tested the Aloha gripper branch.
 
