@@ -171,4 +171,40 @@ Once you're done with the interface, close the browser and run:
 
 You can find the Web Teleoperation docs here: https://github.com/hello-robot/stretch_web_teleop.
 
+### 8. Switching Back to the Original Gripper
 
+If you plan to switch back to the original gripper, you will need to follow these steps:
+
+#### 1) Uninstall the local editable branch:
+```bash
+pip3 uninstall -y hello-robot-stretch-body
+```
+
+#### 2) Reinstall the original version from PyPI:
+```bash
+pip3 install hello-robot-stretch-body
+```
+This will restore your environment to the exact state it was in before you tested the Aloha gripper branch.
+
+#### 3) Edit `stretch_user_params.yaml` back to its original content: 
+```yaml
+#User parameters
+#You can override nominal settings here
+#USE WITH CAUTION. IT IS POSSIBLE TO CAUSE UNSAFE BEHAVIOR OF THE ROBOT 
+robot:
+  use_collision_manager: 0
+```
+
+#### 4) Change both branches from `stretch_body` and `stretch_web_teleop` to master:
+```bash
+cd ~/repos/stretch_body
+git checkout master
+
+cd ~/ament_ws/src/stretch_web_teleop
+git checkout master
+```
+
+#### 5) Run a system check to ensure everything is up to date:
+```bash
+stretch_system_check.py -v
+```
