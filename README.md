@@ -8,6 +8,10 @@
 >
 > After installing or removing the gripper hardware, power the robot back on before continuing with the software configuration steps.
 
+<div align="center">
+  <img src="docs/aloha_gripper.jpg" alt="base" width="500"/>
+</div>
+
 
 ### 1. Uninstall existing Stretch Body
 
