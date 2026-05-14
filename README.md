@@ -1,5 +1,13 @@
 # Stretch 3 Aloha Gripper Implementation
 
+> **Important:**
+>
+> Always fully power off the robot before installing or removing the Aloha Gripper.
+>
+> Do not connect or disconnect the gripper while the robot is powered on, as this may damage the Dynamixel servos or communication bus.
+>
+> After installing or removing the gripper hardware, power the robot back on before continuing with the software configuration steps.
+
 ### 1. Uninstall existing Stretch Body
 
 ```bash
