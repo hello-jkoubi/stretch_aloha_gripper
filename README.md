@@ -70,9 +70,9 @@ eoa_wrist_dw3_aloha_gripper:
 
 Before filling in the values above, you must first determine:
 
-- <fully-closed-ticks> → servo ticks when the Gripper is fully closed
-- <fully-open-ticks> → servo ticks when the Gripper is fully open
-- <homing-ticks> → servo ticks used as the Gripper homing position
+- `<fully-closed-ticks>` → servo ticks when the Gripper is fully closed
+- `<fully-open-ticks>` → servo ticks when the Gripper is fully open
+- `<homing-ticks>` → servo ticks used as the Gripper homing position
 
 You will use the `REx_dynamixel_jog.py` tool to retrieve these values.
 
